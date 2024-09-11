@@ -1,0 +1,20 @@
+@startuml
+title Diagramme d'utilisation du produit 
+
+left to right direction
+
+actor User
+
+usecase "Consulter Liste des Produits" as UC1
+usecase "Modifier un Produit" as UC2
+usecase "Supprimer un Produit" as UC3
+usecase "Ajouter un Produit" as UC4
+usecase "Rechercher un Produit" as UC5
+
+User --> UC1
+User --> UC2
+User --> UC3
+User --> UC4
+User --> UC5
+
+@enduml
