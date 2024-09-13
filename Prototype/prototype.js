@@ -1,6 +1,7 @@
 const readline = require("readline");
 const ApprenantManager = require("./Managers/ApprenantManager");
 const Add = ApprenantManager.Add;
+// const Delete = ApprenantManager.Delete;
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -9,6 +10,7 @@ const rl = readline.createInterface({
 
 const askQuestion = (query) => {
     return new Promise((resolve) => rl.question(query, resolve));
+
 };
 
 const names_list = async() => {
