@@ -28,9 +28,7 @@ const Add = (référence, nom, description, prix, catégorie, stock, image) => {
     produitsArray.push(produit);
     writeData(produitsArray);
     console.log("Product added successfully.");
-
 };
-
 
 // Function to delete a product by ID or name
 const Delete = (input) => {
@@ -53,7 +51,29 @@ const Delete = (input) => {
     }
 };
 
+// Function to view all products
+const ViewAll = () => {
+    const produitsArray = readData();
+    if (produitsArray.length === 0) {
+        console.log("No products available.");
+    } else {
+        console.log("\n=== All Products ===");
+        produitsArray.forEach(produit => {
+            console.log(`ID: ${produit.id}`);
+            console.log(`Référence: ${produit.référence}`);
+            console.log(`Nom: ${produit.nom}`);
+            console.log(`Description: ${produit.description}`);
+            console.log(`Prix: ${produit.prix}`);
+            console.log(`Catégorie: ${produit.catégorie}`);
+            console.log(`Stock: ${produit.stock}`);
+            console.log(`Image: ${produit.image}`);
+            console.log("----------------------");
+        });
+    }
+};
+
 module.exports = {
     Delete,
     Add,
+    ViewAll, // Export the new function
 };

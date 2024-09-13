@@ -2,6 +2,7 @@ const readline = require("readline");
 const ProduitManager = require("./Managers/ProduitManager");
 const Add = ProduitManager.Add;
 const Delete = ProduitManager.Delete;
+const ViewAll = ProduitManager.ViewAll; // Import the ViewAll function
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -17,6 +18,7 @@ const showMenu = () => {
     console.log("\n========== Welcome to Produit Manager ==========");
     console.log(" a - Add a product");
     console.log(" d - Delete a product");
+    console.log(" v - View all products");
     console.log(" e - Exit");
     console.log("================================================");
 };
@@ -26,7 +28,7 @@ const produitMenu = async() => {
 
     while (exit === false) {
         showMenu(); // Display the plain menu
-        const choice = await askQuestion("\nChoose an option (a, d, e): ");
+        const choice = await askQuestion("\nChoose an option (a, d, v, e): "); // Add 'v' option
 
         if (choice === "a") {
             const référence = await askQuestion("Enter the référence: ");
@@ -38,13 +40,15 @@ const produitMenu = async() => {
             const image = await askQuestion("Enter the image URL or path: ");
             Add(référence, nom, description, prix, catégorie, stock, image);
         } else if (choice === "d") {
-            const id = await askQuestion("Enter name or id: ");
-            Delete(parseInt(id));
+            const id = await askQuestion("Enter the name or id: ");
+            Delete(id);
+        } else if (choice === "v") {
+            ViewAll();
         } else if (choice === "e") {
             exit = true;
             console.log("Exiting the program. Goodbye!");
         } else {
-            console.log("Invalid input. Please enter 'a' to add, 'd' to delete, or 'e' to exit.");
+            console.log("Invalid input. Please enter 'a' to add, 'd' to delete, 'v' to view all products, or 'e' to exit.");
         }
     }
 
