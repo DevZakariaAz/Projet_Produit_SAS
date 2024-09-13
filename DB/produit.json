@@ -1,22 +1,41 @@
-[
-  {
-    "id": 1,
-    "référence": "PROMO25",
-    "nom": "TV LG",
-    "description": "high Quality",
-    "prix": 1000,
-    "catégorie": "Electronics",
-    "stock": 10,
-    "image": "test"
-  },
-  {
-    "id": 2,
-    "référence": "test",
-    "nom": "test",
-    "description": "test",
-    "prix": "0",
-    "catégorie": "test",
-    "stock": "0",
-    "image": "test"
-  }
+[{
+        "id": 1,
+        "référence": "PROMO25",
+        "nom": "TV LG",
+        "description": "high Quality",
+        "prix": 1000,
+        "catégorie": "Electronics",
+        "stock": 10,
+        "image": "test"
+    },
+    {
+        "id": 2,
+        "référence": "test",
+        "nom": "test",
+        "description": "test",
+        "prix": "0",
+        "catégorie": "test",
+        "stock": "0",
+        "image": "test"
+    },
+    {
+        "id": 4,
+        "référence": "test",
+        "nom": "test",
+        "description": "test",
+        "prix": "01",
+        "catégorie": "test",
+        "stock": "01",
+        "image": "test"
+    },
+    {
+        "id": 5,
+        "référence": "test2",
+        "nom": "test2",
+        "description": "s",
+        "prix": "s",
+        "catégorie": "s",
+        "stock": "s",
+        "image": "s"
+    }
 ]

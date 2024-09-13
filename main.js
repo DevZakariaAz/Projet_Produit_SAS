@@ -38,7 +38,7 @@ const produitMenu = async() => {
             const image = await askQuestion("Enter the image URL or path: ");
             Add(référence, nom, description, prix, catégorie, stock, image);
         } else if (choice === "d") {
-            const id = await askQuestion("Enter the id: ");
+            const id = await askQuestion("Enter name or id: ");
             Delete(parseInt(id));
         } else if (choice === "e") {
             exit = true;
